@@ -86,5 +86,5 @@ When I was learning about anomaly detection with Autoencoder, I created two sepa
 	* Long short-term memory, https://en.wikipedia.org/wiki/Long_short-term_memory	
 
 
-
+## 
 Author: Bartosz Majewski
