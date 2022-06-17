@@ -41,16 +41,30 @@ text
 
 ## 1st Approach
 ```NYC Taxi- anomaly detection with Autoencoder.ipynb```
-The first approach was to use a regular autocoder to detect days on which the number of passengers per hour was significantly different than on other days. The idea was to split the time series into days and create a new data frame as follows: one row corresponds to one day and one column corresponds to a 30-minute interval. The next step was to teach the autoencoder to reconstruct the number of taxi passengers on a given day as 48-dimensional observations (each dimension corresponded to a 30-minute interval). Then I was able to detect days with a different pattern of of NYC taxi passengers. Most of the detected anomalies match the following events: NYC Marathon, Thanksgiving, Christmas, New Years Day and January 2015 North American blizzard.
 
-Disadvantage of the methods I assumed the days were independent of each other and I did not use RNN (LSTM).
+**Goal:** The first approach was to use a regular autocoder to detect days on which the number of passengers per hour was significantly different than on other days. 
+
+**Idea:** The idea was to split the time series into days and create a new data frame as follows: one row corresponds to one day and one column corresponds to a 30-minute interval. The next step was to teach the autoencoder to reconstruct the number of taxi passengers on a given day as 48-dimensional observations (each dimension corresponded to a 30-minute interval). Then I was able to detect days with a different pattern of of NYC taxi passengers. 
+
+FIGURES
+
+**Results:**
+
+FIGURES
+
+Most of the detected anomalies match the following events: NYC Marathon, Thanksgiving, Christmas, New Years Day and January 2015 North American blizzard. 
+
+
+
+**Disadvantage of the methods:** I assumed that the days are independent of each other and I treat them as separate observations.
+
 
 
 ## 2nd Approach
 text
 
 ## Appendix
-When I was learning about anomaly detection with Autoenkoder, two separate projects were created that are based on those in the Section *References*:
+When I was learning about anomaly detection with Autoencoder, I created two separate projects that are based on projects from *References*:
 * [Set of ECG signals - anomaly detection - Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Set%20of%20ECG%20-%20anomaly%20detection%20-%20Autoencoder.ipynb)
 * [Stock Proce - anomaly detection - LSTM Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Stock%20price%20-%20anomaly%20detection%20-%20LSTM%20Autoencoder.ipynb)
 
