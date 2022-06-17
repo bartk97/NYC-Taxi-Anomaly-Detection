@@ -12,7 +12,7 @@
 The raw data is from the [NYC Taxi and Limousine Commission](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). The data file consists of aggregating the total number of taxi passengers into 30 minute buckets.
 
 **Data with highlighted anomalies**:
-![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Image/Data%20with%20highlighted%20anomalies.png)
+![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/Data%20with%20highlighted%20anomalies.png)
 
 
 
@@ -30,11 +30,13 @@ An **autoencoder** is is a neural network that has two parts: an **encoder** and
 
 An autocoder tires to reconstruct the input, so anomalies can be detected by analysis of the reconstruction loss.
 
-![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Image/Autoencoder%20architecture.png)
+![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/Autoencoder%20architecture.png)
 
 
 ## LSTM Antoencoder
 text
+
+![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/LSTM.png)
 
 
 ## 1st Approach
