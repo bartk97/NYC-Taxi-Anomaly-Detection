@@ -22,7 +22,7 @@ The raw data is from the [NYC Taxi and Limousine Commission](https://www.nyc.gov
 The goal of the project is to detect an anomaly in the dataset containing the number of taxi passengers in New York.
 
 
-## Antoencoder
+## Anomaly Detection with Antoencoder
 
 An **autoencoder** is is a neural network that has two parts: an **encoder** and a **decoder**.
 * an encoder maps the input into the code,
@@ -33,7 +33,7 @@ An autocoder tires to reconstruct the input, so anomalies can be detected by ana
 ![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/Autoencoder%20architecture.png)
 
 
-## LSTM Antoencoder
+## Anomaly Detection with LSTM Antoencoder
 text
 
 ![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/LSTM.png)
