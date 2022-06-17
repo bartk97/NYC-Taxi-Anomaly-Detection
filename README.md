@@ -46,9 +46,9 @@ text
 text
 
 ## Appendix
-When I was learning about anomaly detection with Autoenkoder, two separate projects were created that are based on those in the Section 'References'.
-* ECG
-* Stock Price
+When I was learning about anomaly detection with Autoenkoder, two separate projects were created that are based on those in the Section *References*:
+* [Set of ECG signals - anomaly detection with Autoencoder](https://github.com/bartk97/Anomaly-Detection)
+* [Stock Proce - anomaly detection with LSTM Autoencoder](https://github.com/bartk97/Anomaly-Detection)
 
 ## References
 
