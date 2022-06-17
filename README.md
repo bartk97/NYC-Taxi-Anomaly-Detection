@@ -45,6 +45,10 @@ text
 ## 2nd Approach
 text
 
+## Appendix
+When I was learning about anomaly detection with Autoenkoder, two separate projects were created that are based on those in the Section 'References'.
+* ECG
+* Stock Price
 
 ## References
 
