@@ -5,7 +5,7 @@
 ```nyc_taxi.csv``` - Number of NYC taxi passengers, where the five anomalies occur during 
 * [NYC Marathon](https://en.wikipedia.org/wiki/2014_New_York_City_Marathon) (02.11.2014)
 * Thanksgiving (27.11.2014)
-* Christmas (25-28.12.2014)
+* Christmas (24-26.12.2014)
 * New Years Day (01.01.2015)
 * [January 2015 North American blizzard](https://en.wikipedia.org/wiki/January_2015_North_American_blizzard) (26-27.01.2015)
 
