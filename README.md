@@ -51,8 +51,8 @@ text
 
 ## Appendix
 When I was learning about anomaly detection with Autoenkoder, two separate projects were created that are based on those in the Section *References*:
-* [Set of ECG signals - anomaly detection with Autoencoder](https://github.com/bartk97/Anomaly-Detection)
-* [Stock Proce - anomaly detection with LSTM Autoencoder](https://github.com/bartk97/Anomaly-Detection)
+* [Set of ECG signals - anomaly detection - Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Set%20of%20ECG%20-%20anomaly%20detection%20-%20Autoencoder.ipynb)
+* [Stock Proce - anomaly detection - LSTM Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Stock%20price%20-%20anomaly%20detection%20-%20LSTM%20Autoencoder.ipynb)
 
 ## References
 
