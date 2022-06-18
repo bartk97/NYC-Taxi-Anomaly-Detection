@@ -24,7 +24,7 @@ The goal of the project is to detect an anomaly in the dataset containing the nu
 
 ## Anomaly Detection with Antoencoder
 
-An **autoencoder** is is a neural network that has two parts: an **encoder** and a **decoder**.
+An **autoencoder** is a neural network used to learn efficient codings of unlabeled data (unsupervised learning). It has two main parts: an **encoder** and a **decoder**.
 * an encoder maps the input into the code,
 * a decoder maps the code to a reconstruction of the input.
 
@@ -34,15 +34,23 @@ An autocoder tires to reconstruct the input, so anomalies can be detected by ana
 
 
 ## Anomaly Detection with LSTM Antoencoder
-text
 
-![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/LSTM.png)
+**Recurrent neural network (RNN)** - a type of neural network that is typically used to sequential data such as time series. RNN keeps a memory of what it has already processed so that it can learn from previous iterations during training.
+
+![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/rnn.png)
+
+**Long short-term memory (LSTM)** - When training a RNN using back-propagation, the long-term gradients which are back-propagated "vanish" or "explode", because of the computations involved in the process, which use finite-precision numbers. RNNs using LSTM units partially solve the vanishing gradient problem, because LSTM units allow gradients to also flow unchanged. 
+
+
+**LSTM Antoencoder**
+
+
 
 
 ## 1st Approach
 ```NYC Taxi- anomaly detection with Autoencoder.ipynb```
 
-**Goal:** The first approach was to use a regular autocoder to detect days on which the number of passengers per hour was significantly different than on other days. 
+**Goal:** The first approach was to use a vanilla autocoder to detect days on which the number of passengers per hour was significantly different than on other days. 
 
 **Idea:** The idea was to split the time series into days and create a new data frame as follows: one row corresponds to one day and one column corresponds to a 30-minute interval:
 
