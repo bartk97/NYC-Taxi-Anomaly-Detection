@@ -78,8 +78,8 @@ Then I was able to detect days with a different pattern of of NYC taxi passenger
 * '2014-12-27' - Christmas time
 * '2014-12-28' - Christmas time
 * '2015-01-01' - New Year Day
-* '2015-01-04'
-* '2015-01-18' 
+* '2015-01-04' - ?
+* '2015-01-18' - ?
 * '2015-01-26' - blizzard
 * '2015-01-27' - blizzard 
 
