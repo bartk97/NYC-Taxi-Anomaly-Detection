@@ -44,19 +44,36 @@ text
 
 **Goal:** The first approach was to use a regular autocoder to detect days on which the number of passengers per hour was significantly different than on other days. 
 
-**Idea:** The idea was to split the time series into days and create a new data frame as follows: one row corresponds to one day and one column corresponds to a 30-minute interval. The next step was to teach the autoencoder to reconstruct the number of taxi passengers on a given day as 48-dimensional observations (each dimension corresponded to a 30-minute interval). Then I was able to detect days with a different pattern of of NYC taxi passengers. 
+**Idea:** The idea was to split the time series into days and create a new data frame as follows: one row corresponds to one day and one column corresponds to a 30-minute interval:
 
-FIGURES
+![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/data%20frame.png)
 
-**Results:**
+The next step was to teach the autoencoder to reconstruct the number of taxi passengers on a given day as 48-dimensional observations (each dimension corresponded to a 30-minute interval). Then I was able to detect days with a different pattern of of NYC taxi passengers:
 
-FIGURES
+![link](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Images/loss%20per%20day.png)
 
-Most of the detected anomalies match the following events: NYC Marathon, Thanksgiving, Christmas, New Years Day and January 2015 North American blizzard. 
+**Deceted anomalies:**
+
+![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/detected%20anomalies.jpg)
+
+* '2014-11-01' - one day before the NYC Marathon
+* '2014-11-27' - Thanksgiving
+* '2014-12-07' 
+* '2014-12-24' - Christmas time
+* '2014-12-25' - Christmas time
+* '2014-12-26' - Christmas time
+* '2014-12-27' - Christmas time
+* '2014-12-28' - Christmas time
+* '2015-01-01' - New Year Day
+* '2015-01-04'
+* '2015-01-18' 
+* '2015-01-26' - blizzard
+* '2015-01-27' - blizzard 
 
 
 
-**Disadvantage of the methods:** I assumed that the days are independent of each other and I treat them as separate observations.
+
+**Disadvantage of the method:** I assumed that the days are independent of each other and I treat them as separate observations.
 
 
 
@@ -64,9 +81,11 @@ Most of the detected anomalies match the following events: NYC Marathon, Thanksg
 text
 
 ## Appendix
-When I was learning about anomaly detection with Autoencoder, I created two separate projects that are based on projects from *References*:
+When I was preparing this project and learning about anomaly detection with DL, I created two projects:
 * [Set of ECG signals - anomaly detection - Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Set%20of%20ECG%20-%20anomaly%20detection%20-%20Autoencoder.ipynb)
 * [Stock Proce - anomaly detection - LSTM Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Stock%20price%20-%20anomaly%20detection%20-%20LSTM%20Autoencoder.ipynb)
+ 
+ which are based on projects from *References*.
 
 ## References
 
