@@ -50,7 +50,7 @@ An autocoder tires to reconstruct the input, so anomalies can be detected by ana
 
 
 ## 1st Approach
-```NYC Taxi- anomaly detection with Autoencoder.ipynb```
+```NYC Taxi- anomaly detection with Autoencoder.ipynb``` [[Notebook]](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/NYC%20Taxi-%20anomaly%20detection%20with%20Autoencoder.ipynb)
 
 **Goal:** The first approach was to use a vanilla autocoder to detect days on which the number of passengers per hour was significantly different than on other days. 
 
