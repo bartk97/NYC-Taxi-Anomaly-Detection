@@ -83,7 +83,7 @@ text
 ## Appendix
 When I was preparing this project and learning about anomaly detection with DL, I created two projects:
 * [Set of ECG signals - anomaly detection - Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Set%20of%20ECG%20-%20anomaly%20detection%20-%20Autoencoder.ipynb)
-* [Stock Proce - anomaly detection - LSTM Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Stock%20price%20-%20anomaly%20detection%20-%20LSTM%20Autoencoder.ipynb)
+* [Stock Proce - anomaly detection - LSTM Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Stock%20price%20-%20anomaly%20detection%20-%20LSTM%20Autoencoder.ipynb) (needs to be improved)
  
  which are based on projects from *References*.
 
