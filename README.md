@@ -41,8 +41,10 @@ An autocoder tires to reconstruct the input, so anomalies can be detected by ana
 
 **Long short-term memory (LSTM)** - When training a RNN using back-propagation, the long-term gradients which are back-propagated "vanish" or "explode", because of the computations involved in the process, which use finite-precision numbers. RNNs using LSTM units partially solve the vanishing gradient problem, because LSTM units allow gradients to also flow unchanged. 
 
+![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/LSTM.png)
 
-**LSTM Antoencoder**
+
+**LSTM Antoencoder** - an implementation of an autoencoder for sequence data using an Encoder-Decoder LSTM architecture. For a given dataset of sequences, an encoder-decoder LSTM is configured to read the input sequence, encode it, decode it, and recreate it. The performance of the model is evaluated based on the model’s ability to recreate the input sequenc
 
 
 
