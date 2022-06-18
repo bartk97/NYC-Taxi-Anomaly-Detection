@@ -1,4 +1,4 @@
-# NYC-Taxi-Anomaly-Detection
+# NYC Taxi - Anomaly Detection
 *Final Project for the 'Machine Learning and Deep Learning' Course at AGH Doctoral School*
 
 ## Dataset
