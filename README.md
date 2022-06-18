@@ -58,7 +58,11 @@ An autocoder tires to reconstruct the input, so anomalies can be detected by ana
 
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/data%20frame.png)
 
-The next step was to teach the autoencoder to reconstruct the number of taxi passengers on a given day as 48-dimensional observations (each dimension corresponded to a 30-minute interval). Then I was able to detect days with a different pattern of of NYC taxi passengers:
+The next step was to teach the autoencoder to reconstruct the number of taxi passengers on a given day as 48-dimensional observations (each dimension corresponded to a 30-minute interval). 
+
+![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/reconstruction.png)
+
+Then I was able to detect days with a different pattern of of NYC taxi passengers by looking at reconstruction loss:
 
 ![link](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Images/loss%20per%20day.png)
 
