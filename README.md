@@ -88,7 +88,7 @@ The next step was to teach the autoencoder to reconstruct the number of taxi pas
 
 
 ## 2nd Approach
-text
+This approach is different from the previous one. Now we will not look at each day separately, but we will divide our data into moving windows $X_ {i}, X_{i + 1}, \ldots, X_{i + l}$ of length $l = 26$. This means that each window contains data from 12 hours. In this approach, I do not detect the days with the anomaly, but I am looking at a shorter period of time. Additionally, in this approach I allow a dependency between days since I use LSTM Autoencoder.
 
 ## Appendix
 When I was preparing this project and learning about anomaly detection with DL, I created two projects:
