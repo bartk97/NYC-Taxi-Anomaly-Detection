@@ -39,7 +39,7 @@ An autocoder tires to reconstruct the input, so anomalies can be detected by ana
 
 ![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/rnn.png)
 
-**Long short-term memory (LSTM)** - When training a RNN using back-propagation, the long-term gradients which are back-propagated "vanish" or "explode", because of the computations involved in the process, which use finite-precision numbers. RNNs using LSTM units partially solve the vanishing gradient problem, because LSTM units allow gradients to also flow unchanged. 
+**Long short-term memory (LSTM)** - when training a RNN using back-propagation, the long-term gradients which are back-propagated "vanish" or "explode", because of the computations involved in the process, which use finite-precision numbers. RNNs using LSTM units partially solve the vanishing gradient problem, because LSTM units allow gradients to also flow unchanged. 
 
 ![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/LSTM.png)
 
@@ -58,7 +58,7 @@ An autocoder tires to reconstruct the input, so anomalies can be detected by ana
 
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/data%20frame.png)
 
-The next step was to teach the autoencoder to reconstruct the number of taxi passengers on a given day as 48-dimensional observations (each dimension corresponded to a 30-minute interval). 
+The next step was to train the autoencoder to reconstruct the number of taxi passengers on a given day as 48-dimensional observations (each dimension corresponded to a 30-minute interval). 
 
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/reconstruction.png)
 
@@ -91,7 +91,23 @@ Then I was able to detect days with a different pattern of of NYC taxi passenger
 
 
 ## 2nd Approach
-This approach is different from the previous one. Now we will not look at each day separately, but we will divide our data into moving windows $X_ {i}, X_{i + 1}, \ldots, X_{i + l}$ of length $l = 26$. This means that each window contains data from 12 hours. In this approach, I do not detect the days with the anomaly, but I am looking at a shorter period of time. Additionally, in this approach I allow a dependency between days since I use LSTM Autoencoder.
+
+```NYC TAXI- anomaly detection - LSTM Autoencoder.ipynb``` [[Notebook]](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/NYC%20TAXI-%20anomaly%20detection%20with%20LSTM%20Autoencoder.ipynb)
+
+This approach is different from the previous one. I do not look at each day separately, but we I split a time seires into moving windows $X_ {i}, X_{i + 1}, \ldots, X_{i + l}$ of length $l = 48$. This means that each window contains data from 24 hours. In this approach, I do not detect the days with the anomaly, but I am looking at 24h intervals. The advantage of this method is that I allow a dependency between days since I use LSTM Autoencoder (not vanilla Autoencoder) and do not treat the data as a single 48-dim observation. 
+
+The next steps are similar to the previous approach. We train the LSTM Autoencoder to reconstruct our time series (as a set of windows):
+
+![link]()
+
+and analyze the reconstruction error of the data from the test set:
+
+![link]()
+
+**Deceted anomalies:**
+
+![link]()
+
 
 ## Appendix
 When I was preparing this project and learning about anomaly detection with DL, I created two projects:
