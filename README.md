@@ -72,7 +72,6 @@ Then I was able to detect days with a different pattern of of NYC taxi passenger
 
 * '2014-11-01' - one day before the NYC Marathon
 * '2014-11-27' - Thanksgiving
-* '2014-12-07' 
 * '2014-12-24' - Christmas time
 * '2014-12-25' - Christmas time
 * '2014-12-26' - Christmas time
