@@ -66,7 +66,7 @@ Then I was able to detect days with a different pattern of of NYC taxi passenger
 
 ![link](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Images/loss%20per%20day.png)
 
-**Deceted anomalies:**
+**Deceted anomalies:** The darker the fill, the greater the reconstruction error
 
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/detected%20anomalies.jpg)
 
