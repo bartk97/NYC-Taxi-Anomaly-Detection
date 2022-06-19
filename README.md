@@ -98,15 +98,20 @@ This approach is different from the previous one. I do not look at each day sepa
 
 The next steps are similar to the previous approach. We train the LSTM Autoencoder to reconstruct our time series (as a set of windows):
 
-![link]()
+![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/reconstruction%20lstm.png)
 
 and analyze the reconstruction error of the data from the test set:
 
-![link]()
+![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/loss%20lstm.png)
 
 **Deceted anomalies:**
 
 ![link]()
+
+Dates where anomalies have been detected:
+* 2014-11-01 08:00:00 - 2014-11-02 01:00:00 - one day before the NYC Marathon
+* 2014-12-24 13:00:00 - 2014-12-26 03:00:00 - Christmas time
+* 2015-01-25 21:00:00 - 2015-01-27 16:00:00 - blizzard
 
 
 ## Appendix
