@@ -86,9 +86,6 @@ Dates where anomalies have been detected:
 * '2015-01-26' - blizzard
 * '2015-01-27' - blizzard 
 
-
-
-
 **Disadvantage of the method:** I assumed that the days are independent of each other and I treat them as separate observations.
 
 
@@ -107,7 +104,7 @@ and analyze the reconstruction error of the data from the test set:
 
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/loss%20lstm.png)
 
-the threshold was selected by analyzing the above plot. Threshold = 0.2
+The threshold was selected by analyzing the above plot. Threshold = 0.2
 
 **Deceted anomalies:**
 
@@ -118,7 +115,12 @@ Dates where anomalies have been detected:
 * 2014-12-24 13:00:00 - 2014-12-26 03:00:00 - Christmas time
 * 2015-01-25 21:00:00 - 2015-01-27 16:00:00 - blizzard
 
+**Disadvantage of the method:** It did not detect anomalies in the period: Thanksgiving, New Year Day and parts of the Christmas time.
+
+
 ## Summary
+
+
 
 
 ## Appendix
