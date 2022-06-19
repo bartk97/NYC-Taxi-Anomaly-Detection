@@ -118,11 +118,6 @@ Dates where anomalies have been detected:
 **Disadvantage of the method:** It did not detect anomalies in the period: Thanksgiving, New Year Day and parts of the Christmas time.
 
 
-## Summary
-
-
-
-
 ## Appendix
 When I was preparing this project and learning about anomaly detection with DL, I created two projects:
 * [Set of ECG signals - anomaly detection - Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Set%20of%20ECG%20-%20anomaly%20detection%20-%20Autoencoder.ipynb)
