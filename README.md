@@ -104,7 +104,7 @@ and analyze the reconstruction error of the data from the test set:
 
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/loss%20lstm.png)
 
-The threshold was selected by analyzing the above plot. Threshold = 0.2
+The threshold was selected by analyzing the above plot, threshold = 0.2. Most likely, if I decreased the threshold, thanksgiving might be detected as anomalies, but also other additional dates that may not necessarily be anomalies.
 
 **Deceted anomalies:**
 
