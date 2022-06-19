@@ -66,10 +66,13 @@ Then I was able to detect days with a different pattern of of NYC taxi passenger
 
 ![link](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Images/loss%20per%20day.png)
 
+Threshold = mean loss + 2*std loss 
+
 **Deceted anomalies:** The darker the fill, the greater the reconstruction error
 
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/detected%20anomalies.jpg)
 
+Dates where anomalies have been detected:
 * '2014-11-01' - one day before the NYC Marathon
 * '2014-11-27' - Thanksgiving
 * '2014-12-24' - Christmas time
@@ -104,14 +107,18 @@ and analyze the reconstruction error of the data from the test set:
 
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/loss%20lstm.png)
 
+the threshold was selected by analyzing the above plot. Threshold = 0.2
+
 **Deceted anomalies:**
 
-![link]()
+![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/detected%20anomalies%20lstm.jpg)
 
 Dates where anomalies have been detected:
 * 2014-11-01 08:00:00 - 2014-11-02 01:00:00 - one day before the NYC Marathon
 * 2014-12-24 13:00:00 - 2014-12-26 03:00:00 - Christmas time
 * 2015-01-25 21:00:00 - 2015-01-27 16:00:00 - blizzard
+
+## Summary
 
 
 ## Appendix
