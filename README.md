@@ -19,7 +19,7 @@ The raw data is from the [NYC Taxi and Limousine Commission](https://www.nyc.gov
 
 
 ## Goal
-The goal of the project is to detect an anomaly in the dataset containing the number of taxi passengers in New York.
+The goal of the project is to detect anomalies in the dataset containing the number of taxi passengers in New York.
 
 
 ## Anomaly Detection with Antoencoder
@@ -35,7 +35,7 @@ An autocoder tires to reconstruct the input, so anomalies can be detected by ana
 
 ## Anomaly Detection with LSTM Antoencoder
 
-**Recurrent neural network (RNN)** - a type of neural network that is typically used to sequential data such as time series. RNN keeps a memory of what it has already processed so that it can learn from previous iterations during training.
+**Recurrent neural network (RNN)** - a neural network that is typically used to time series. The RNN keeps a memory of what it has already processed so that it can learn from previous iterations during training.
 
 ![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/rnn.png)
 
@@ -44,7 +44,7 @@ An autocoder tires to reconstruct the input, so anomalies can be detected by ana
 ![info](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/LSTM.png)
 
 
-**LSTM Antoencoder** - an implementation of an autoencoder for sequence data using an Encoder-Decoder LSTM architecture. For a given dataset of sequences, an encoder-decoder LSTM is configured to read the input sequence, encode it, decode it, and recreate it. The performance of the model is evaluated based on the model’s ability to recreate the input sequenc
+**LSTM Antoencoder** - an implementation of an autoencoder for sequence data using an Encoder-Decoder LSTM architecture. For a given dataset of sequences, an encoder-decoder LSTM is configured to read the input sequence, encode it, decode it, and recreate it. The performance of the model is evaluated based on the model’s ability to recreate the input.
 
 
 
@@ -52,9 +52,7 @@ An autocoder tires to reconstruct the input, so anomalies can be detected by ana
 ## 1st Approach
 ```NYC Taxi- anomaly detection with Autoencoder.ipynb``` [[Notebook]](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/NYC%20Taxi-%20anomaly%20detection%20with%20Autoencoder.ipynb)
 
-**Goal:** The first approach was to use a vanilla autocoder to detect days on which the number of passengers per hour was significantly different than on other days. 
-
-**Idea:** The idea was to split the time series into days and create a new data frame as follows: one row corresponds to one day and one column corresponds to a 30-minute interval:
+The first approach was to use a vanilla autocoder to detect days on which the number of passengers per hour was significantly different than on other days. The idea was to split the time series into days and create a new data frame as follows: one row corresponds to one day and one column corresponds to a 30-minute interval:
 
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/data%20frame.png)
 
@@ -86,25 +84,20 @@ Dates where anomalies have been detected:
 * '2015-01-26' - blizzard
 * '2015-01-27' - blizzard 
 
-**Disadvantage of the method:** I assumed that the days are independent of each other and I treat them as separate observations.
-
-
 
 ## 2nd Approach
 
 ```NYC TAXI- anomaly detection - LSTM Autoencoder.ipynb``` [[Notebook]](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/NYC%20TAXI-%20anomaly%20detection%20with%20LSTM%20Autoencoder.ipynb)
 
-This approach is different from the previous one. I do not look at each day separately, but we I split a time seires into moving windows $X_ {i}, X_{i + 1}, \ldots, X_{i + l}$ of length $l = 48$. This means that each window contains data from 24 hours. In this approach, I do not detect the days with the anomaly, but I am looking at 24h intervals. The advantage of this method is that I allow a dependency between days since I use LSTM Autoencoder (not vanilla Autoencoder) and do not treat the data as a single 48-dim observation. 
-
-The next steps are similar to the previous approach. We train the LSTM Autoencoder to reconstruct our time series (as a set of windows):
+This approach differed from the previous one. I didn't look at days separately, but at data points. I tried to detect anomalies by looking at single observations (30 minutes). This method used LSTM Autoecnder and I were using the previous 24 hours to recreate each data. At first I split into 24h moving winodws $\{X_{i}. X_{i+1}, \ldots, X_{i+48}\}$. I trained the LSTM Autoencoder to reconstruct a time series:
 
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/reconstruction%20lstm.png)
 
-and analyze the reconstruction error of the data from the test set:
+and analyzed the reconstruction error of the data from the test set:
 
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/loss%20lstm.png)
 
-The threshold was selected by analyzing the above plot, threshold = 0.2. Most likely, if I decreased the threshold, thanksgiving might be detected as anomalies, but also other additional dates that may not necessarily be anomalies.
+The threshold was selected by analyzing the above plot, threshold = 0.2. Perhaps, if I decreased the threshold, thanksgiving might be detected as anomalies, but also other additional dates that may not necessarily be anomalies.
 
 **Deceted anomalies:**
 
@@ -115,13 +108,13 @@ Dates where anomalies have been detected:
 * 2014-12-24 13:00:00 - 2014-12-26 03:00:00 - Christmas time
 * 2015-01-25 21:00:00 - 2015-01-27 16:00:00 - blizzard
 
-**Disadvantage of the method:** It did not detect anomalies in the period: Thanksgiving, New Year Day and parts of the Christmas time.
+It did not detect anomalies in the period: Thanksgiving, New Year Day and parts of the Christmas time.
 
 
 ## Appendix
 When I was preparing this project and learning about anomaly detection with DL, I created two projects:
 * [Set of ECG signals - anomaly detection - Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Set%20of%20ECG%20-%20anomaly%20detection%20-%20Autoencoder.ipynb)
-* [Stock Proce - anomaly detection - LSTM Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Stock%20price%20-%20anomaly%20detection%20-%20LSTM%20Autoencoder.ipynb) (needs to be improved)
+* [Stock Price - anomaly detection - LSTM Autoencoder](https://github.com/bartk97/NYC-Taxi-Anomaly-Detection/blob/main/Other/Stock%20price%20-%20anomaly%20detection%20-%20LSTM%20Autoencoder.ipynb) (needs to be improved)
  
  which are based on projects from *References*.
 
