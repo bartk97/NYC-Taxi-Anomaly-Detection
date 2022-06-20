@@ -1,4 +1,4 @@
-# NYC Taxi - Anomaly Detection
+# Anomaly Detection in Time Series with Autoencoder
 *Final Project for the 'Machine Learning and Deep Learning' Course at AGH Doctoral School*
 
 ## Dataset
