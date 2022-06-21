@@ -104,7 +104,7 @@ The threshold was selected by analyzing the above plot, threshold = 0.2. Perhaps
 ![link](https://raw.githubusercontent.com/bartk97/NYC-Taxi-Anomaly-Detection/main/Images/detected%20anomalies%20lstm.jpg)
 
 Dates where anomalies have been detected:
-* 2014-11-01 08:00:00 - 2014-11-02 01:00:00 - one day before the NYC Marathon
+* 2014-11-01 08:00:00 - 2014-11-02 01:00:00 - NYC Marathon
 * 2014-12-24 13:00:00 - 2014-12-26 03:00:00 - Christmas time
 * 2015-01-25 21:00:00 - 2015-01-27 16:00:00 - blizzard
 
