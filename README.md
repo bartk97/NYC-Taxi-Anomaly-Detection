@@ -1,6 +1,9 @@
 # Anomaly Detection in Time Series with Autoencoder
 *Final Project for the 'Machine Learning and Deep Learning' Course at AGH Doctoral School*
 
+My scientific field is mathematical statistics, and more precisely the analysis of non-stationary series and resampling methods for them. My research problem is not related to ML and DL, and I chose this subject to learn DL methods for time series.
+
+
 ## Dataset
 ```nyc_taxi.csv``` - Number of NYC taxi passengers, where the five anomalies occur during 
 * [NYC Marathon](https://en.wikipedia.org/wiki/2014_New_York_City_Marathon) (02.11.2014)
@@ -137,4 +140,6 @@ When I was preparing this project and learning about anomaly detection with DL, 
 
 
 ## 
-Author: Bartosz Majewski
+Author: Bartosz Majewski, 
+	PhD Student at AGH Doctoral School, 
+	Faculty of Applied Mathematics
